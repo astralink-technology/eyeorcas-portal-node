@@ -7,9 +7,3 @@ exports.name = function (req, res) {
     name: 'Bob'
   });
 };
-
-exports.name2 = function (req, res) {
-    res.json({
-        name: 'test'
-    });
-};
