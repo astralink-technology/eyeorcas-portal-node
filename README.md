@@ -94,7 +94,7 @@ http://{{host-name}}/eyeorcas/deviceRelationship/getEntityDeviceRelationshipDeta
 ````
 http://{{host-name}}/eyeorcas/deviceRelationship/addEntityDeviceRelationshipWithValues
 ````
-#### Median
+#### Media
 **getDeviceRelationshipMedia** (Released v0.1)
 
 ````
@@ -516,15 +516,31 @@ http://{{host-name}}/core/productValue/deleteProductValue
 ### eyeOrcas un-versioned (APIs Under Review)
 These eyeOrcas APIs are currently legacy APIs and will require review.
 
+#### Authentication
+
+**logInFromApp** (High Priority Release)
+
+**signUpFromApp** (High Priority Release)
+
+**signUp**
+
+**login**
+
+**verifyAccount** (High Priority Release)
+
+**resetPasswordRequest**
+
+**resetPassword**
+
+**assignAdmin**	
+
 #### Device
 
-**addDeviceWithValues**
+**addDeviceFromApp** (High Priority Release)
 
-**addDeviceFromApp**
+**removeDeviceFromApp** (High Priority Release)
 
-**removeDeviceFromApp**
-
-**getDevicesFromApp**
+**getDevicesFromApp** (High Priority Release)
 
 #### Device Relationship
 
