@@ -1,7 +1,7 @@
-dbconnectHelper = require('../../helpers/dbConnect');
-idgenHelper = require('../../helpers/idGen');
-dateTimeHelper = require('../../helpers/dateTime');
-cryptHelper = require('../../helpers/crypt');
+var dbconnectHelper = require('../../helpers/dbConnect');
+var idgenHelper = require('../../helpers/idGen');
+var dateTimeHelper = require('../../helpers/dateTime');
+var cryptHelper = require('../../helpers/crypt');
 
 exports.getDeviceRelationshipValue = function(req, res){
     var deviceRelationshipValueId

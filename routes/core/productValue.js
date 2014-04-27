@@ -1,6 +1,6 @@
-dbconnectHelper = require('../../helpers/dbConnect');
-idgenHelper = require('../../helpers/idGen');
-dateTimeHelper = require('../../helpers/dateTime');
+var dbconnectHelper = require('../../helpers/dbConnect');
+var idgenHelper = require('../../helpers/idGen');
+var dateTimeHelper = require('../../helpers/dateTime');
 exports.getProductValue = function(req, res){
     var productValueId = null;
     var productValueName = null;

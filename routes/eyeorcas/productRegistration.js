@@ -1,4 +1,4 @@
-dbconnectHelper = require('../../helpers/dbConnect');
+var dbconnectHelper = require('../../helpers/dbConnect');
 exports.getEntityProductRegistrationDetail = function(req, res){
     var productRegistrationId = null;
     var type = null;

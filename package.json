@@ -1,14 +1,18 @@
 {
-    "name": "eyeorcas-portal",
-    "private": true,
-    "dependencies": {
-        "express": "~3.2.6",
-        "jade": "~0.31.2",
-        "pg" : "*",
-        "knex" : "*",
-        "mandrill-api" : "*",
-        "moment" : "*",
-        "bcrypt" : "*",
-        "forever" : "*"
-    }
+  "name": "eyeorcas-portal-node",
+  "private": true,
+  "dependencies": {
+      "express": "~3.2.6",
+      "pg" : "*",
+      "mandrill-api" : "*",
+      "moment" : "*",
+      "bcrypt" : "*",
+      "express-ejs-layouts" : "*",
+      "ejs" : "*",
+      "request" : "*",
+      "passport" : "*",
+      "grunt" : "*",
+      "grunt-contrib-cssmin": "*",
+      "grunt-contrib-sass": "*"
+  }
 }

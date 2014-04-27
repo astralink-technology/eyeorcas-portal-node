@@ -8,3 +8,16 @@ exports.encryption = function (req, res){
     var password = 's8944896d';
     res.send(cryptHelper.encrypt(req, res, password));
 }
+
+exports.legacyDecryption = function (req, res){
+    var hashedPassword = '$2y$10$GY93N2dtTvE9dfdpmcO0X.uTfu75iKxfyFH50SpXStDdZjun6VLQG';
+    var inputPassword = 's8944896d';
+
+    cryptHelper.legacyDecrypt(req, res, inputPassword, hashedPassword, function(result){
+        if (result){
+            res.json('authenticated');
+        }else{
+            res.json('authentication failed');
+        }
+    })
+}

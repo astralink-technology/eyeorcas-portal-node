@@ -1,6 +1,6 @@
-dbconnectHelper = require('../../helpers/dbConnect');
-idgenHelper = require('../../helpers/idGen');
-dateTimeHelper = require('../../helpers/dateTime');
+var dbconnectHelper = require('../../helpers/dbConnect');
+var idgenHelper = require('../../helpers/idGen');
+var dateTimeHelper = require('../../helpers/dateTime');
 exports.getPhone = function(req, res){
     var phoneId = null;
     var phoneDigits = null;

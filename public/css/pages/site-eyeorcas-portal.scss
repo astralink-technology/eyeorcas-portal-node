@@ -1,0 +1,21 @@
+//Sass Libraries and Mixin
+@import "../partials/_variables"; //variables
+@import "../lib/_normalize"; //IE normalizer
+@import "../lib/bourbon/bourbon"; //bourbon mixin
+@import "../lib/_compass_mixin"; //compass mixin
+@import "../lib/flags/_flags"; //country flags
+@import "../partials/_bootstrap-eyeorcas-portal"; //bootstrap lifecare customization
+
+//pages
+@import "../partials/_layout"; //generic layout
+//landing
+@import "_landing";
+
+@include sticky-footer(210px,210px);
+
+/* responsive iphone, smartphone*/
+@media only screen
+and (min-width : 320px)
+and (max-width : 568px) {
+  @include sticky-footer(550px, 550px);
+}
