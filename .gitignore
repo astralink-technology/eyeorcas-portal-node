@@ -16,3 +16,6 @@
 
 #SASS
 .sass-cache
+
+#Node Modules
+node_modules
