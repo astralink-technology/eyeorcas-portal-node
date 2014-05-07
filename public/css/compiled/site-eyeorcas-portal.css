@@ -929,15 +929,23 @@ table {
 .alert-general {
   margin: 8px 0px; }
 
+.btn-primary {
+  font-weight: 500;
+  color: white;
+  background-color: #2a9494;
+  border-radius: 0px;
+  border: 0px; }
+
+.btn-primary:hover {
+  background-color: #5fbdce; }
+
 html, body {
   width: 100%;
   height: auto;
   height: 100%;
   float: left;
-  font-weight: 300; }
-
-body {
-  background-color: #f0f0f0; }
+  font-weight: 300;
+  font-family: 'Roboto'; }
 
 .full-block {
   width: 100%;
@@ -948,15 +956,30 @@ body {
 
 .navbar-main {
   margin-bottom: 0px !important;
-  background-color: white;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  background: white;
-  background: rgba(255, 255, 255, 0.7); }
+  background: #edf7f9;
+  background: rgba(237, 247, 249, 0.85);
+  border-radius: 0px;
+  border: 0px; }
   .navbar-main .navbar-toggle {
     margin: 30px 20px; }
+  .navbar-main .btn-login {
+    margin: 20px;
+    font-weight: 500;
+    color: white !important;
+    background-color: #2a9494 !important;
+    border: 0px; }
+  .navbar-main .btn-login:hover {
+    background-color: #5fbdce !important; }
+  .navbar-main .btn-signup {
+    margin: 20px 0px;
+    font-weight: 500;
+    color: #2a9494 !important; }
+  .navbar-main .btn-signup:hover {
+    color: #5fbdce !important; }
   .navbar-main .dropdown-toggle, .navbar-main .nav-link {
     padding: 46px 20px; }
   .navbar-main .dropdown-menu {
@@ -1171,9 +1194,221 @@ body {
 
   #footer .footer-credits .copyright span {
     text-align: left; } }
+.responsive-phone-show {
+  display: none; }
+
+/* responsive iphone, smartphone*/
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .responsive-phone-hide {
+    display: none !important; }
+
+  .responsive-phone-img-cover {
+    width: 100%;
+    float: left; }
+
+  .responsive-phone-show {
+    display: block; } }
 /* responsive tablets*/
 .landing {
+  /* responsive iphone, smartphone*/
   /* responsive tablets*/ }
+  .landing .eyeorcas-jumbotron {
+    background-image: url("/img/landing-background.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding: 80px 0px 200px 0px; }
+  .landing .mini-feature {
+    color: white;
+    text-align: center;
+    padding: 20px; }
+    .landing .mini-feature span {
+      font-size: 1.71429em;
+      font-weight: 700;
+      margin: 34px 0px 32px 0px;
+      float: left;
+      width: 100%; }
+    .landing .mini-feature h3 {
+      font-size: 1.28571em;
+      line-height: 24px; }
+    .landing .mini-feature i {
+      padding: 20px 0px;
+      font-size: 4.28571em; }
+  .landing .mini-feature-rm {
+    background-color: #0e4647; }
+  .landing .mini-feature-smartphone-app {
+    background-color: #0e6466; }
+    .landing .mini-feature-smartphone-app img {
+      margin: 12px 0px; }
+  .landing .mini-feature-portal {
+    background-color: #2a9494; }
+    .landing .mini-feature-portal img {
+      margin: 12px 0px 13px 0px; }
+  .landing .mini-feature-gcn {
+    background-color: #77cdd4; }
+  .landing .mini-feature-firmware-upgrade {
+    background-color: #0e6466; }
+  .landing .mini-feature-phone {
+    background-color: #0e4647; }
+  .landing .eyeorcas-intro {
+    padding: 0px;
+    background-color: #edf7f9;
+    text-align: center;
+    margin-top: 200px; }
+    .landing .eyeorcas-intro img {
+      margin-top: -54px; }
+    .landing .eyeorcas-intro h2 {
+      background-color: #edf7f9;
+      color: #777777;
+      font-size: 2.28571em;
+      padding: 0px 0px 60px 0px; }
+  .landing section {
+    float: left;
+    width: 100%;
+    padding: 40px 0px; }
+  .landing .feature h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 36px; }
+  .landing .feature p {
+    margin: 12px 0px;
+    font-size: 1.28571em;
+    color: #777777;
+    line-height: 32px; }
+  .landing .feature-eyeorcas-engine-init {
+    text-align: center;
+    padding: 0px; }
+    .landing .feature-eyeorcas-engine-init img {
+      margin-top: -346px; }
+    .landing .feature-eyeorcas-engine-init .separator {
+      width: 50%;
+      float: left;
+      height: 346px; }
+    .landing .feature-eyeorcas-engine-init .separator-left {
+      background-color: #b7e3ef; }
+    .landing .feature-eyeorcas-engine-init .separator-right {
+      background-color: #ceebf2; }
+  .landing .feature-eyeorcas-engine {
+    padding: 0px 0px 40px 0px; }
+    .landing .feature-eyeorcas-engine .img-holder {
+      text-align: right;
+      padding-right: 20px; }
+      .landing .feature-eyeorcas-engine .img-holder img {
+        width: 90%; }
+    .landing .feature-eyeorcas-engine h3 {
+      margin-top: 60px; }
+  .landing .feature-push .img-holder {
+    text-align: center; }
+    .landing .feature-push .img-holder img {
+      width: 75%; }
+  .landing .feature-smartphone-app .img-holder {
+    text-align: center; }
+    .landing .feature-smartphone-app .img-holder img {
+      width: 75%; }
+  .landing .feature-rm .img-holder {
+    text-align: right;
+    padding: 0px; }
+    .landing .feature-rm .img-holder img {
+      width: 95%; }
+  .landing .feature-portal .img-holder {
+    text-align: left;
+    padding: 0px; }
+    .landing .feature-portal .img-holder img {
+      width: 95%; }
+  .landing .feature-overview {
+    padding: 40px 0px 0px 0px;
+    text-align: center; }
+    .landing .feature-overview img {
+      width: 100%; }
+  .landing .eyeorcas-products-title {
+    text-align: center; }
+    .landing .eyeorcas-products-title h2 {
+      font-size: 2em;
+      font-weight: 500;
+      margin: 12px 0px 0px 0px;
+      color: #777777; }
+  .landing .solution-introduction {
+    padding: 0px;
+    font-weight: 400;
+    background-color: #2a9494;
+    color: white;
+    text-align: center; }
+    .landing .solution-introduction i {
+      font-size: 3.42857em;
+      padding: 12px 0px 0px 0px; }
+    .landing .solution-introduction h2 {
+      font-size: 1.71429em;
+      font-weight: 300;
+      margin: 4px 0px 12px 0px; }
+  .landing .solution-details {
+    text-align: center;
+    padding: 60px 0px 80px 0px; }
+    .landing .solution-details h2 {
+      font-weight: 500;
+      font-size: 2.28571em;
+      padding: 12px 0px 0px 0px; }
+    .landing .solution-details p {
+      font-weight: 300;
+      font-size: 1.71429em;
+      margin: 0px 0px 20px 0px; }
+    .landing .solution-details .btn-eyeorcas-lifecare {
+      margin-left: 8px; }
+  @media only screen and (min-width: 320px) and (max-width: 568px) {
+    .landing .eyeorcas-jumbotron {
+      background-position: top;
+      background-image: url("/img/landing-background-xs.png");
+      padding: 80px 0px 140px 0px; }
+    .landing .eyeorcas-intro img {
+      width: 250px;
+      margin-top: -34px; }
+    .landing .eyeorcas-intro h2 {
+      font-size: 1.71429em;
+      padding: 0px 20px 40px 20px;
+      line-height: 30px;
+      font-weight: 500; }
+    .landing .feature {
+      border-bottom: 1px solid #eeeeee; }
+      .landing .feature .img-holder img {
+        width: 100%; }
+      .landing .feature h3, .landing .feature p {
+        text-align: left; }
+      .landing .feature h3 {
+        line-height: 36px; }
+    .landing .feature-control {
+      text-align: center; }
+    .landing .feature-eyeorcas-engine {
+      text-align: center; }
+      .landing .feature-eyeorcas-engine .img-holder img {
+        width: 100%;
+        margin: 0px 0px 0px 0px; }
+      .landing .feature-eyeorcas-engine h3 {
+        margin: 24px 0px 0px 0px; }
+    .landing .eyeorcas-products-title img {
+      width: 40%; }
+    .landing .eyeorcas-products-title h2 {
+      font-size: 1.71429em;
+      margin: 8px 0px 0px 0px; }
+    .landing .solution-introduction i {
+      font-size: 2em;
+      padding: 12px 0px 0px 0px; }
+    .landing .solution-introduction h2 {
+      font-size: 1.28571em;
+      margin: 2px 0px 12px 0px; }
+    .landing .solution-details {
+      padding: 40px 0px 60px 0px; }
+      .landing .solution-details img {
+        width: 95%; }
+      .landing .solution-details h2 {
+        padding: 0px;
+        margin: 12px 0px;
+        font-size: 1.42857em;
+        font-weight: 300; }
+      .landing .solution-details p {
+        padding: 0px 12px;
+        font-size: 1.14286em; }
+    .landing .btn-primary {
+      margin-top: 8px; }
+    .landing .btn-eyeorcas-lifecare {
+      margin-left: 0px !important; } }
 
 html, body {
   min-height: 100%; }

@@ -2,3 +2,15 @@
 .alert-general{
   margin:8px 0px;
 }
+
+//buttons
+.btn-primary{
+  font-weight:500;
+  color: $color-text-reversed;
+  background-color:$color-brand-blue;
+  border-radius: 0px;
+  border:0px;
+}
+.btn-primary:hover{
+  background-color:$color-brand-light-blue;
+}

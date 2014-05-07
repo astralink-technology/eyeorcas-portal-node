@@ -5,9 +5,9 @@ html, body{
   height:100%;
   float:left;
   font-weight:300;
+  font-family:'Roboto';
 }
 body{
-  background-color:$color-layout-background-muted;
 }
 
 .full-block{
@@ -21,17 +21,36 @@ body{
 
 .navbar-main{
   margin-bottom:0px !important;
-  background-color: $color-text-reversed;
   position:fixed;
   width:100%;
   top: 0;
   z-index:100;
-  background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, .7);
+  background: rgb(237, 247, 249);
+  background: rgba(237, 247, 249, .85);
+  border-radius: 0px;
+  border: 0px;
   .navbar-toggle{
     margin:30px 20px;
   }
 
+  .btn-login{
+    margin:20px;
+    font-weight:500;
+    color: $color-text-reversed !important;
+    background-color:$color-brand-blue !important;
+    border:0px;
+  }
+  .btn-login:hover{
+    background-color:$color-brand-light-blue !important;
+  }
+  .btn-signup{
+    margin:20px 0px;
+    font-weight:500;
+    color:$color-brand-blue !important;
+  }
+  .btn-signup:hover{
+    color:$color-brand-light-blue !important;
+  }
   .dropdown-toggle, .nav-link{
     padding: 46px 20px;
   }
@@ -331,6 +350,27 @@ and (max-width : 568px) {
     }
   }
 }
+
+.responsive-phone-show{
+  display:none;
+}
+
+/* responsive iphone, smartphone*/
+@media only screen
+and (min-width : 320px)
+and (max-width : 568px) {
+  .responsive-phone-hide{
+    display:none !important;
+  }
+  .responsive-phone-img-cover{
+    width:100%;
+    float:left;
+  }
+  .responsive-phone-show{
+    display:block;
+  }
+}
+
 /* responsive tablets*/
 @media only screen
 and (min-width : 768px)
