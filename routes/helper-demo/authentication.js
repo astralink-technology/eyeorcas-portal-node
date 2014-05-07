@@ -2,7 +2,7 @@ var authHelper = require('../../helpers/authentication');
 var dbConnectHelper = require('../../helpers/dbConnect');
 
 exports.auth = function(req, res){
-    authHelper.authenticate(req, res, 'shiweifong@gmail.com', 's8944896d', true, function(result, entityDetails){
+    authHelper.authenticate(req, res, 'shiweifong@gmail.com', '12341234', true, function(result, entityDetails){
         if (result){
             res.json({
                 RowsReturned : entityDetails.rows.length,
@@ -51,7 +51,7 @@ exports.authenticateExpress = function (req, res){
 }
 
 exports.signUp = function (req, res){
-    authHelper.newAuthentication(req, res, "nodeUser2@gmail.com", "nodenodeode", "Node", "User", function(result){
+    authHelper.newAuthentication(req, res, "shiweifong@gmail.com", "12341234", "Shi Wei", "Fong", function(result){
         if (!result.Error){
             res.json({
                 RowsReturned : result.rows.length,
