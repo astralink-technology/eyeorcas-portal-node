@@ -1410,6 +1410,18 @@ html, body {
     .landing .btn-eyeorcas-lifecare {
       margin-left: 0px !important; } }
 
+.contact {
+  /* responsive tablets*/ }
+
+.eyex {
+  /* responsive tablets*/ }
+
+.lifebox {
+  /* responsive tablets*/ }
+
+.lifecare {
+  /* responsive tablets*/ }
+
 html, body {
   min-height: 100%; }
 

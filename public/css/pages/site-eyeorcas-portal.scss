@@ -8,8 +8,17 @@
 
 //pages
 @import "../partials/_layout"; //generic layout
+
 //landing
 @import "_landing";
+
+//contact
+@import "_contact";
+
+//products
+@import "products/_eyex";
+@import "products/_lifebox";
+@import "products/_lifecare";
 
 @include sticky-footer(210px,210px);
 

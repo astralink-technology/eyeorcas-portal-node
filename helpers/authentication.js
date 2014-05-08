@@ -59,6 +59,7 @@ function getEntityDetails(req, res, authenticationId, callback){
 function startUserSession(req, res, entityDetails){
     req.session.firstName = entityDetails.rows[0].first_name;
     req.session.lastName = entityDetails.rows[0].last_name;
+    req.session.name = entityDetails.rows[0].name;
     req.session.status = entityDetails.rows[0].status;
     req.session.approved = entityDetails.rows[0].approved;
     req.session.entityId = entityDetails.rows[0].entity_id;

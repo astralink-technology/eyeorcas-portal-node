@@ -5,6 +5,7 @@
 
 var express = require('express'),
     routes = require('./routes'),
+    products = require('./routes/products'),
     eyeorcas = require('./routes/eyeorcas'),
     core = require('./routes/core/'),
     helperDemo = require('./routes/helper-demo'),
@@ -49,6 +50,11 @@ if (app.get('env') === 'production') {
 
 // serve web pages
 app.get('/', routes.index);
+app.get('/product/eyexchange', products.eyex);
+app.get('/product/lifecare', products.lifecare);
+app.get('/product/lifebox', products.lifebox);
+
+app.get('/contact', routes.contact);
 
 // JSON API
 app.get ('/core/:base/:api', core);

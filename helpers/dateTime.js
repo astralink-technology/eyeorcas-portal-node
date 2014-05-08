@@ -6,3 +6,11 @@ exports.utcNow = function(req, res){
 exports.now = function(req, res){
     return moment().format();
 }
+
+exports.convertToUtc = function (req, res, dateTime){
+    if (dateTime){
+        return moment(dateTime).utc().format();
+    }else{
+        return false;
+    }
+}
