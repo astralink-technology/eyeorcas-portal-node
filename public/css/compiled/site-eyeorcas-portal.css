@@ -1,51 +1,180 @@
+/*! normalize.css http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
 /*
-Syntax error: Invalid CSS after "Ω": expected "{", was "@include sticky..."
-        on line 23 of pages/site-eyeorcas-portal.scss
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
 
-18: //products
-19: @import "products/_eyex";
-20: @import "products/_lifebox";
-21: @import "products/_lifecare";
-22: Ω
-23: @include sticky-footer(210px,210px);
-24: 
-25: /* responsive iphone, smartphone*\/
-26: @media only screen
-27: and (min-width : 320px)
-28: and (max-width : 568px) {
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
 
-Backtrace:
-pages/site-eyeorcas-portal.scss:23
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:1312:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:1248:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:1243:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:640:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:634:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:659:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:652:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:116:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:409:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:248:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+audio:not([controls]) {
+  display: none; }
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *  http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *  www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0; }
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0; }
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1 {
+  font-size: 2em;
+  margin: 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 0; }
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-body:before {
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 1em 0; }
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
   white-space: pre;
-<<<<<<< HEAD
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"Ω\": expected \"{\", was \"@include sticky...\"\A         on line 23 of pages/site-eyeorcas-portal.scss\A \A 18: //products\A 19: @import \"products/_eyex\";\A 20: @import \"products/_lifebox\";\A 21: @import \"products/_lifecare\";\A 22: Ω\A 23: @include sticky-footer(210px,210px);\A 24: \A 25: /* responsive iphone, smartphone*/\A 26: @media only screen\A 27: and (min-width : 320px)\A 28: and (max-width : 568px) {"; }
-=======
   white-space: pre-wrap;
   word-wrap: break-word; }
 
@@ -834,35 +963,42 @@ html, body {
   background: #edf7f9;
   background: rgba(237, 247, 249, 0.85);
   border-radius: 0px;
-  border: 0px; }
+  border: 0px;
+  font-weight: 500;
+  font-size: 1.28571em; }
   .navbar-main .navbar-toggle {
     margin: 30px 20px; }
+  .navbar-main .navbar-nav li a {
+    padding: 20px;
+    color: #0e6466; }
+  .navbar-main .navbar-nav li a:hover {
+    background-color: #5fbdce;
+    color: white; }
+  .navbar-main .navbar-nav .open .dropdown-toggle {
+    background-color: #2a9494 !important;
+    color: white !important; }
   .navbar-main .btn-login {
-    margin: 20px;
-    font-weight: 500;
     color: white !important;
     background-color: #2a9494 !important;
     border: 0px; }
   .navbar-main .btn-login:hover {
     background-color: #5fbdce !important; }
-  .navbar-main .btn-signup {
-    margin: 20px 0px;
-    font-weight: 500;
-    color: #2a9494 !important; }
-  .navbar-main .btn-signup:hover {
-    color: #5fbdce !important; }
   .navbar-main .dropdown-toggle, .navbar-main .nav-link {
-    padding: 46px 20px; }
+    padding: 20px; }
+  .navbar-main .dropdown .open {
+    background-color: #2a9494;
+    color: white; }
   .navbar-main .dropdown-menu {
     border: 0px;
     border-radius: 0px;
     padding: 5px;
+    min-width: 200px;
     background-color: #2a9494; }
     .navbar-main .dropdown-menu a {
       background-color: white;
       padding: 10px 16px !important; }
     .navbar-main .dropdown-menu a:hover {
-      background-color: #ff9a40 !important; }
+      background-color: #5fbdce !important; }
     .navbar-main .dropdown-menu span, .navbar-main .dropdown-menu label {
       display: block;
       text-align: center; }
@@ -870,27 +1006,6 @@ html, body {
       margin: 12px 0px; }
     .navbar-main .dropdown-menu label {
       margin: 0px 0px 12px 0px; }
-  .navbar-main .user-dropdown .dropdown-toggle {
-    padding: 20px;
-    width: 300px;
-    float: left;
-    background-color: #eeeeee; }
-    .navbar-main .user-dropdown .dropdown-toggle .media {
-      float: left; }
-    .navbar-main .user-dropdown .dropdown-toggle i {
-      float: right;
-      margin: 15px 0px;
-      font-size: 1.42857em; }
-  .navbar-main .user-dropdown .dropdown-menu .form-inline {
-    float: left;
-    padding: 8px; }
-    .navbar-main .user-dropdown .dropdown-menu .form-inline input {
-      width: 266px; }
-  .navbar-main .user-dropdown .dropdown-menu li, .navbar-main .user-dropdown .dropdown-menu a {
-    width: 350px;
-    float: left; }
-    .navbar-main .user-dropdown .dropdown-menu li .media-object, .navbar-main .user-dropdown .dropdown-menu a .media-object {
-      margin: 0px 12px 0px 0px; }
 
 .alert-sm {
   padding: 4px 12px; }
@@ -1324,4 +1439,3 @@ html, body {
     clear: both;
     position: relative;
     height: 550px; } }
->>>>>>> a3dc1750cb9492b3ec4cf7284ad7f1158600a1ee

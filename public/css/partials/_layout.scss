@@ -29,13 +29,28 @@ body{
   background: rgba(237, 247, 249, .85);
   border-radius: 0px;
   border: 0px;
+  font-weight:500;
+  font-size:em(18, $text-size-base);
   .navbar-toggle{
     margin:30px 20px;
   }
 
+  .navbar-nav{
+    li a{
+      padding:20px;
+      color:$color-brand-dark-blue;
+    }
+    li a:hover{
+      background-color:$color-brand-light-blue;
+      color:$color-text-reversed;
+    }
+    .open .dropdown-toggle{
+      background-color:$color-brand-blue !important;
+      color:$color-text-reversed !important;
+    }
+  }
+
   .btn-login{
-    margin:20px;
-    font-weight:500;
     color: $color-text-reversed !important;
     background-color:$color-brand-blue !important;
     border:0px;
@@ -43,28 +58,26 @@ body{
   .btn-login:hover{
     background-color:$color-brand-light-blue !important;
   }
-  .btn-signup{
-    margin:20px 0px;
-    font-weight:500;
-    color:$color-brand-blue !important;
-  }
-  .btn-signup:hover{
-    color:$color-brand-light-blue !important;
-  }
   .dropdown-toggle, .nav-link{
-    padding: 46px 20px;
+    padding: 20px;
+  }
+
+  .dropdown .open{
+    background-color:$color-brand-blue;
+    color:$color-text-reversed;
   }
   .dropdown-menu{
     border:0px;
     border-radius:0px;
     padding:5px;
+    min-width:200px;
     background-color:$color-brand-blue;
     a {
       background-color: $color-text-reversed;
       padding:10px 16px !important;
     }
     a:hover {
-      background-color: $color-brand-light-yellow !important  ;
+      background-color: $color-brand-light-blue !important  ;
     }
     span, label{
       display:block;
@@ -75,39 +88,6 @@ body{
     }
     label{
       margin:0px 0px 12px 0px;
-    }
-  }
-
-  .user-dropdown{
-     .dropdown-toggle{
-        padding:20px;
-        width:300px;
-       float:left;
-       background-color:$color-muted-light;
-        .media{
-          float:left;
-        }
-       i{
-         float:right;
-         margin:15px 0px;
-         font-size:em(20, $text-size-base);
-       }
-     }
-    .dropdown-menu{
-      .form-inline{
-        float:left;
-        padding:8px;
-        input{
-          width:266px;
-        }
-      }
-      li, a{
-        width:350px;
-        float:left;
-        .media-object{
-          margin:0px 12px 0px 0px;
-        }
-      }
     }
   }
 }
