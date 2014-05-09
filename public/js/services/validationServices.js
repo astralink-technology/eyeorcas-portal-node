@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lifecareApp.validationServices', []).
+angular.module('eyeorcasPortalApp.validationServices', []).
     factory('validationServices', function () {
     return {
         validateRequiredField: function (value, requiredMessage) {

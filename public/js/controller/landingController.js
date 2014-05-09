@@ -4,5 +4,4 @@
 
 angular.module('eyeorcasPortalApp.landingController', []).
   controller('landingController', ['$scope', function ($scope) {
-        alert('hi');
   }])
