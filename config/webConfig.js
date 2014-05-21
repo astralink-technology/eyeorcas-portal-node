@@ -4,7 +4,7 @@ exports.dbConfig = function(){
     dbConfig.appName = 'eyeOrcas';
     dbConfig.username = 'ubuntu';
     dbConfig.password = 'astralink';
-    dbConfig.host = 'api.eyeorcas.com';
+    dbConfig.host = 'home.eyeorcas.com';
     dbConfig.port = '5432';
     dbConfig.db = 'OrcasEye';
 //

@@ -3,13 +3,17 @@ var pg = require('pg');
 
 exports.connectAndQuery = function(req, res, queryString, variables, afterQueryFunction, tpAppName, tpUsername, tpPassword, tpHost, tpPort, tpDb){
     var dbConfig = config.dbConfig();
-    var conString = dbConfig.appName + "://" +  dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbConfig.db;
+    var conString = "";
 
     //allow users to connect to third party database after user pass in the values.
     if (tpAppName && tpUsername && tpPassword && tpHost && tpPort && tpDb){
         conString = tpAppName + "://" +  tpUsername + ":" + tpPassword + "@" + tpHost + ":" + tpPort + "/" + tpDb;
+        console.log(conString);
+    }else{
+        conString = dbConfig.appName + "://" +  dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbConfig.db;
     }
 
+    console.log(conString);
     var client = new pg.Client(conString);
     client.connect(function(err) {
         if(err) {
