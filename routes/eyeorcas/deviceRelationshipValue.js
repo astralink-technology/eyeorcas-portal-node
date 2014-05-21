@@ -3,26 +3,17 @@ var idgenHelper = require('../../helpers/idGen');
 var dateTimeHelper = require('../../helpers/dateTime');
 var cryptHelper = require('../../helpers/crypt');
 
-exports.getStatusMonitor =  function (req, res){
-    dbconnectHelper.connectAndQuery(
-        req
-        , res
-        , 'Select status from monitor where camera_id = $1'
-        , [
-            'i7bf0ec5d777'
-        ],null,'orcas_monitor','ubuntu','astralink','home.eyeorcas.com','5432','orcas_monitor');
-//    dbconnectHelper.connectAndQuery(
-//        req
-//        , res
-//        , 'Select status from monitor where camera_id = $1'
-//        , [
-//           'i7bf0ec5d777'
-//        ]);
-}
-
 exports.getUserDevicesDetails = function(req, res){
     var ownerId = null;
     if (req.query.OwnerId) ownerId = req.query.OwnerId;
+
+    var tpConfig = new Object();
+    tpConfig.appName = "orcasMonitor";
+    tpConfig.username = "ubuntu";
+    tpConfig.password = "astralink";
+    tpConfig.host = "home.eyeorcas.com";
+    tpConfig.port = "5432";
+    tpConfig.db = "orcas_monitor";
 
     dbconnectHelper.connectAndQuery(
         req, res,
@@ -44,7 +35,6 @@ exports.getUserDevicesDetails = function(req, res){
         , [ownerId]
         , function(results){
             var code = results.rows[0].code;
-            console.log(code);
             if (code){
                 dbconnectHelper.connectAndQuery(
                     req
@@ -52,7 +42,7 @@ exports.getUserDevicesDetails = function(req, res){
                     , 'Select status from monitor where camera_id = $1'
                     , [
                         code
-                    ],null,'orcas_monitor','ubuntu','astralink','home.eyeorcas.com','5432','orcas_monitor');
+                    ],null, tpConfig);
             }else{
                 res.json({
                     RowsReturned : 0,
