@@ -34,15 +34,35 @@ exports.getUserDevicesDetails = function(req, res){
         'where device_relationship.owner_id = $1'
         , [ownerId]
         , function(results){
-            var code = results.rows[0].code;
+            var code = new Array();
+            for(var x= 0;x<results.rows.length;x++){
+               code.push(results.rows[x].code);
+//                'i7bf0ec5d777',
+//                    '90a78300f447',
+//                    'icca72cbd4c7',
+//                    'ic58c0381d44',
+//                    '90a783089e9a',
+//                    'i6097678dd8d',
+//                    '90a783008888',
+//                    '90a783aaaa24',
+//                    'i38afeb885d2',
+//                    '08002856e53c',
+//                    '08002856e598',
+//                    '90a7830002bc',
+//                    '90a7830014b4',
+//                    '0006668072a8',
+//                    '90a78300f440',
+//                    '90a78300f441',
+//                    '90a78300f43f',
+//                    '90a783028888'
+            }
             if (code){
+                console.log(code);
                 dbconnectHelper.connectAndQuery(
                     req
                     , res
-                    , 'Select status from monitor where camera_id = $1'
-                    , [
-                        code
-                    ],null, tpConfig);
+                    , "Select * from monitor WHERE camera_id IN ('90a78300f441')"
+                    , [],null, tpConfig);
             }else{
                 res.json({
                     RowsReturned : 0,
